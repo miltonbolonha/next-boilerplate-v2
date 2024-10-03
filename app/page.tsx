@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { loadStripe, Stripe } from "@stripe/stripe-js";
 
 import {
   checkPermissionStateAndAct,
@@ -8,6 +9,7 @@ import {
   sendWebPush,
 } from "./Push";
 import { useState, useEffect } from "react";
+import { signIn } from "next-auth/react";
 
 export default function Home() {
   const [unsupported, setUnsupported] = useState<boolean>(false);
@@ -15,6 +17,45 @@ export default function Home() {
     null
   );
   const [message, setMessage] = useState<string | null>(null);
+  const [isCreatingCheckout, setIsCreatingCheckout] = useState<boolean>(false);
+
+  async function handleClick(
+    testeId: string,
+    assinatura: boolean
+  ): Promise<void> {
+    try {
+      setIsCreatingCheckout(true);
+
+      const checkoutResponse = await fetch("/api/create-checkout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ assinatura, testeId }),
+      });
+
+      if (!checkoutResponse.ok) {
+        throw new Error("Failed to create checkout session.");
+      }
+
+      const stripeClient: Stripe | null = await loadStripe(
+        process.env.NEXT_PUBLIC_STRIPE_PUB_KEY as string
+      );
+
+      if (!stripeClient) {
+        throw new Error("Stripe failed to initialize.");
+      }
+
+      const { sessionId }: { sessionId: string } =
+        await checkoutResponse.json();
+      await stripeClient.redirectToCheckout({ sessionId });
+    } catch (error) {
+      console.error("Error during checkout:", error);
+    } finally {
+      setIsCreatingCheckout(false);
+    }
+  }
+
   useEffect(() => {
     const isUnsupported = notificationUnsupported();
     setUnsupported(isUnsupported);
@@ -26,6 +67,7 @@ export default function Home() {
 
   return (
     <div className={"next-initial-css"}>
+      <h1 className="text-3xl font-bold underline">Hello world!</h1>
       <div className={"center"}>
         <button
           disabled={unsupported}
@@ -99,7 +141,29 @@ export default function Home() {
             Read our docs
           </a>
         </div>
+        <div className="flex flex-col gap-5">
+          <button
+            disabled={isCreatingCheckout}
+            className="border rounded-md px-4 py-2 disabled:opacity-50"
+            onClick={() => handleClick("123", false)}
+          >
+            comprar
+          </button>
+          <button
+            disabled={isCreatingCheckout}
+            className="border rounded-md px-4 py-2 disabled:opacity-50"
+            onClick={() => handleClick("123", true)}
+          >
+            assinar
+          </button>
+        </div>
       </main>
+      <div className="center">
+        <h1>login</h1>
+        <div>
+          <button onClick={() => signIn("github")}>Continue with GitHub</button>
+        </div>
+      </div>
       <footer className={"footer"}>
         <a
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
