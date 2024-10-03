@@ -3,21 +3,17 @@ Theme Name: NextJS Boilerplate V2
 Repo URI: https://github.com/miltonbolonha/next-boilerplate-v2
 Description: NextJS App.
 Author: Milton Bolonha
-Version: 0.1.0-journal.1
+Version: 1.0.0-typing
 */
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 1.0 Basic global settings
-2.0 Pages
-3.0 Components
-4.0 Modules
-5.0 Helpers & Fixes
+2.0 Helpers & Fixes
 --------------------------------------------------------------*/
 
 @import "./global/vars";
-@import "./user/user-vars";
 @import "./helpers/responsive";
 
 /*--------------------------------------------------------------
@@ -28,30 +24,7 @@ Version: 0.1.0-journal.1
 @import "./global/base";
 
 /*--------------------------------------------------------------
-3.0 Components
---------------------------------------------------------------*/
-
-// @import "./components/header";
-// @import "./components/footer";
-
-/*--------------------------------------------------------------
-4.0 Modules
---------------------------------------------------------------*/
-
-// @import "./modules/menus";
-// @import "./modules/pages";
-// @import "./modules/single-post";
-
-/*--------------------------------------------------------------
-2.0 Pages
---------------------------------------------------------------*/
-
-// @import "./pages/index";
-
-/*--------------------------------------------------------------
-5.0 Helpers & Fixes
+2.0 Helpers & Fixes
 --------------------------------------------------------------*/
 
 @import "./helpers/helpers";
-@import "./user/user-helpers.scss";
-@import "./user/CUSTOMIZE-ME.scss";
