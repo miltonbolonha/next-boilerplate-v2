@@ -16,12 +16,15 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 export const PricingContainer = () => {
   const [isCreatingCheckout, setIsCreatingCheckout] = useState<boolean>(false);
+  const z = process.env.NEXT_PUBLIC_WEBSITE_URL;
+  const y = z === "http://localhost:3000";
+  const t = y ? z + `/api/netlify/checkout` : z + `.netlify/functions/checkout`;
 
   async function handleClick(priceId: string): Promise<void> {
     try {
       setIsCreatingCheckout(true);
 
-      const checkoutResponse = await fetch("/api/netlify/checkout", {
+      const checkoutResponse = await fetch(t, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

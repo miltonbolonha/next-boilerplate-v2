@@ -16,7 +16,7 @@ package = "@netlify/plugin-emails"
   directory = "app/api/netlify"
 
 [[edge_functions]]
-  path = "/core/app/api/netlify/geo" 
+  path = "/app/api/netlify/geo" 
   function = "injectGeoCookie"
   
 [[plugins]]
