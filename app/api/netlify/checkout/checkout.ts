@@ -13,9 +13,9 @@ export async function POST(req: NextRequest) {
           quantity: 1,
         },
       ],
+      currency: "brl",
       mode: "payment",
       billing_address_collection: "auto",
-
       payment_method_types: ["card", "boleto"],
       success_url: `${req.headers.get("origin")}/sucesso`,
       cancel_url: `${req.headers.get("origin")}/`,
