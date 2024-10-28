@@ -1,0 +1,70 @@
+[
+  {
+    "label": "O que está incluso no Kit de Programação?",
+    "content": "Temos dois Kits atualmente, possuindo livros em pdf, vídeos, ebooks, tecnologia boilerplate e muito mais."
+  },
+  {
+    "label": "O Kit é adequado para iniciantes?",
+    "content": "Sim, o Kit ideal para quem está començando é o Kit Dev Iniciante. Tanto para quem está começando quanto para quem já tem experiência básica ou média."
+  },
+  {
+    "label": "O que tem no Kit Dev Iniciante?",
+    "content": "Material com aulas, livro, sistemas Next.js, trilhas exclusivas, o inovador hacker-book e muito mais. FAQ e canal no Discord."
+  },
+  {
+    "label": "O que tem no Kit Dev A.I.?",
+    "content": "O Kit Dev Iniciante inclui livro de programação, A.I. Times (boilerplate), trilhas Carreira Internacional e StartUP, além de e-book focado no mercado global."
+  },
+  {
+    "label": "Como eu uso os Kits no meu estudo?",
+    "content": "Você receberá diversos materiais, para cada Kit há uma documento especial com instruções de uso."
+  },
+  {
+    "label": "Quanto tempo levo para completar o estudo do conteúdo?",
+    "content": "O tempo varia, mas em média de 1 a 2 meses, dependendo do seu ritmo. Se você não está com todo tempo do mundo, a média varia de 2 a 3 meses."
+  },
+  {
+    "label": "Como funciona a compra?",
+    "content": "A compra é feita via Pix ou Stripe. Após o pagamento, você recebe um código de resgate que te dá acesso ao conteúdo digital imediatamente."
+  },
+  {
+    "label": "É possível pagar o Kit por Pix?",
+    "content": "Sim, aceitamos pagamentos por Pix diretamente pelo WhatsApp para sua conveniência."
+  },
+  {
+    "label": "Quais outras formas de pagamento são aceitas? Dá pra parcelar?",
+    "content": "Aceitamos cartões de crédito e métodos suportados pelo Stripe."
+  },
+  {
+    "label": "Como acesso os materiais?",
+    "content": "Após a compra, você recebe um link de acesso ao conteúdo virtual. Caso tenha adquirido material de pré-venda, aguarde a nossa equipe entrar em contato com você."
+  },
+  {
+    "label": "Quais tecnologias são abordadas no Kit?",
+    "content": "O Kit aborda tecnologias como ChatGPT, Stripe, SendGrid, Tailwind CSS, GitHub Actions, Next.js, TypeScript, JavaScript, e muito mais."
+  },
+  {
+    "label": "O Kit inclui suporte?",
+    "content": "Sim, oferecemos suporte via Discord."
+  },
+  {
+    "label": "O que é a Edu4Dev?",
+    "content": "Edu4Dev é uma plataforma focada em desenvolvimento educacional e tecnológico. Criamos experiências para enriquecer a sua experiência ao se tornar DEV."
+  },
+  {
+    "label": "Quem é Milton Bolonha?",
+    "content": "Criador da Edu4Dev, especialista em desenvolvimento e empreendedorismo tecnológico. Faz websites desde 1998."
+  },
+  {
+    "label": "O que é o AI Times?",
+    "content": "É um sistema pré-moldado (Serverless Next.js Boilerplate), uma base pronta para criar apps modernos com I.A. a custo zero."
+  },
+  {
+    "label": "O que é o Next.js PRO Starter Kit?",
+    "content": "Kit profissional para iniciar projetos robustos com Next.js."
+  },
+  {
+    "label": "O que são as trilhas de aprendizado?",
+    "content": "Roteiros guiados com dicas práticas para alcançar objetivos profissionais."
+  }
+]

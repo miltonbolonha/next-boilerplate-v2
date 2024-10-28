@@ -1,0 +1,238 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: url("/assets/images/background.png") repeat top left;
+  background-size: auto 450px;
+  scroll-behavior: smooth;
+}
+@media (max-width: 960px) {
+  body {
+    background-size: auto 250px;
+  }
+}
+.dark body {
+  background: url("/assets/images/dark-background-30.png") repeat top left;
+}
+
+.sed {
+  font-family: "Sedgwick Ave", cursive;
+}
+.workSans {
+  font-family: "Work Sans Variable", sans-serif;
+}
+p.workSans {
+  font-size: 18px;
+  font-weight: 400;
+}
+.dark p.workSans {
+  color: #fff;
+}
+
+h2.workSans {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.sedgwickAve {
+  font-family: "Sedgwick Ave", cursive;
+}
+h1.sedgwickAve {
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.rammettoOne {
+  font-family: "Rammetto One", system-ui;
+}
+h1.rammettoOne {
+  font-size: 42px;
+  font-weight: 100;
+}
+.unkempt {
+  font-family: "Unkempt", system-ui;
+}
+h2.unkempt {
+  font-size: 26px;
+  font-weight: 100;
+}
+p.unkempt {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.bangers {
+  font-family: "Bangers", system-ui;
+}
+h1.bangers {
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.h100 {
+  height: 100px;
+}
+.bg-muted {
+  background-color: #fff3cd;
+  border: 2px solid #e2ca95;
+  box-shadow: 8px 8px 0 rgba(148, 126, 64, 0.1);
+}
+.bg-muted h3 {
+  color: #302a1e;
+}
+
+.bg-muted p {
+  color: #7a6a49;
+}
+.bg-muted .bg-primary {
+  background-color: #ff9215;
+  color: #302a1e;
+}
+.primary-hover:hover {
+  background-color: hsl(var(--primary));
+  box-shadow: 4px 4px 0 rgba(148, 126, 64, 0.2);
+  color: #fff;
+}
+.green-hover:hover {
+  border-color: #71e99f;
+  background-color: rgb(211, 241, 223);
+  box-shadow: 4px 4px 0 rgba(148, 126, 64, 0.2);
+  color: #153120;
+}
+.logos-carousel {
+  align-self: center;
+}
+
+.gold-btn {
+  background-color: #ff9215;
+  color: #000;
+  font-weight: 700;
+}
+.gold-btn:hover {
+  color: white;
+}
+.testimonial-bg {
+  background-color: rgba(255, 252, 243, 0.9);
+  border: 2px solid #fff1d2;
+  box-shadow: unset;
+}
+@media (max-width: 720px) {
+  .testimonial-bg {
+    padding: 2px 8px;
+  }
+  .testimonial-bg svg {
+    display: none;
+  }
+  .cta-btn {
+    flex-direction: column;
+  }
+  .testimonial h3 {
+    font-size: 16px;
+  }
+  .testimonial p.text-base {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+.testimonial-wrapper .border-b {
+  border-color: #e4cc9e;
+}
+.anchor-hack {
+  position: relative;
+}
+.anchor-hack:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  left: 0;
+  top: -70px;
+}
+
+.w-logos {
+  max-width: 350px;
+}
+.decor1,
+.decor8 {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: -160px;
+  right: 0;
+}
+.decor8 {
+  top: -150px;
+}
+.decor10 {
+  left: unset;
+  right: -120px;
+  top: -300px;
+}
+@media (max-width: 520px) {
+  .decor1 {
+    top: 70px;
+  }
+}
+@media (max-width: 720px) {
+  .decor10 {
+    left: unset;
+    right: -90px;
+    top: 70px;
+    max-width: 450px;
+    opacity: 0.5;
+  }
+}
+.decor7 {
+  position: absolute;
+  z-index: 0;
+
+  top: 30px;
+
+  margin-left: -52px;
+  width: 98px;
+}
+
+.decor2,
+.decor3,
+.decor5 {
+  position: absolute;
+  z-index: 0;
+
+  top: -130px;
+  right: 25px;
+  width: 98px;
+}
+.decor3 {
+  top: -175px;
+  right: unset;
+  width: 55px;
+  left: 75px;
+}
+.decor5 {
+  top: 305px;
+  left: unset;
+  width: 95px;
+  right: 45px;
+}
+.edu4devgif {
+  position: relative;
+  z-index: 1;
+  max-width: 352px;
+}
+@media (max-width: 520px) {
+  .decor3 {
+    top: -100px;
+  }
+  .decor5 {
+    right: 0px;
+  }
+  .decor8 {
+    top: 120px;
+  }
+}
+.hack-header {
+  padding-left: 0;
+}
