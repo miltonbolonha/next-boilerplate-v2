@@ -14,6 +14,8 @@ export async function POST(req: NextRequest) {
         },
       ],
       mode: "payment",
+      billing_address_collection: "auto",
+
       payment_method_types: ["card", "boleto"],
       success_url: `${req.headers.get("origin")}/sucesso`,
       cancel_url: `${req.headers.get("origin")}/`,
@@ -22,7 +24,10 @@ export async function POST(req: NextRequest) {
       },
     });
 
-    return NextResponse.json({ sessionId: session.id });
+    return NextResponse.json({
+      sessionId: session.id,
+      publishableKey: process.env.NEXT_PUBLIC_STRIPE_PUB_KEY,
+    });
   } catch (err) {
     console.error(err);
     return NextResponse.error();
