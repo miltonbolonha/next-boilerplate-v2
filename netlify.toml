@@ -15,6 +15,11 @@ package = "@netlify/plugin-emails"
 [functions]
   directory = "app/api/netlify"
 
+[[redirects]]
+  from = '/api/*'
+  to = '/.netlify/functions/:splat'
+  status = 200
+
 [[edge_functions]]
   path = "/app/api/netlify/geo" 
   function = "injectGeoCookie"
