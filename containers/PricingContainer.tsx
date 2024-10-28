@@ -18,7 +18,9 @@ export const PricingContainer = () => {
   const [isCreatingCheckout, setIsCreatingCheckout] = useState<boolean>(false);
   const z = process.env.NEXT_PUBLIC_WEBSITE_URL;
   const y = z === "http://localhost:3000";
-  const t = y ? z + `/api/netlify/checkout` : z + `.netlify/functions/checkout`;
+  const t = y
+    ? z + `/api/netlify/checkout`
+    : z + `/.netlify/functions/checkout`;
 
   async function handleClick(priceId: string): Promise<void> {
     try {
