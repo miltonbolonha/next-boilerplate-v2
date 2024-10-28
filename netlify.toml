@@ -1,7 +1,7 @@
 [build]
     command = "npm run build"
     functions = "app/api/netlify"
-    publish = "out"
+    publish = ".next"
 
 [build.environment]
   NODE_VERSION = "20.11.0"
