@@ -21,7 +21,7 @@ export const PricingContainer = () => {
     try {
       setIsCreatingCheckout(true);
 
-      const checkoutResponse = await fetch("/api/create-checkout", {
+      const checkoutResponse = await fetch("/api/netlify/checkout", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
