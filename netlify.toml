@@ -1,5 +1,5 @@
 [build]
-    command = "node core/sync.js && npm run build"
+    command = "npm run build"
     functions = "app/api/netlify"
     publish = "out"
 
