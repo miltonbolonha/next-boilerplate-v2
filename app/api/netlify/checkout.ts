@@ -18,10 +18,6 @@ export async function POST(req: NextRequest) {
       billing_address_collection: "auto",
       payment_method_types: ["card", "boleto"],
       success_url: `${req.headers.get("origin")}/sucesso`,
-      cancel_url: `${req.headers.get("origin")}/`,
-      metadata: {
-        priceId,
-      },
     });
 
     return NextResponse.json({
