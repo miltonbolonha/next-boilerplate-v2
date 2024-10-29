@@ -12,6 +12,9 @@ const nextConfig = {
     loaderFile: "./lib/image-loader.js",
     formats: ["image/webp"],
   },
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
+  },
 };
 
 export default nextConfig;
