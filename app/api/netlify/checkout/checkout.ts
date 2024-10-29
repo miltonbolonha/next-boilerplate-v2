@@ -13,11 +13,12 @@ export async function POST(req: NextRequest) {
           quantity: 1,
         },
       ],
-      currency: "brl",
       mode: "payment",
-      billing_address_collection: "auto",
-      payment_method_types: ["card", "boleto"],
+      payment_method_types: ["card"],
       success_url: `${req.headers.get("origin")}/sucesso`,
+      metadata: {
+        priceId,
+      },
     });
 
     return NextResponse.json({

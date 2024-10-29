@@ -19,8 +19,8 @@ export async function POST(req: Request) {
       case "checkout.session.completed":
         if (event.data.object.payment_status === "paid") {
           // pagagamento por cartão com sucesso
-          const testeId = event.data.object.metadata?.testeId;
-          console.log("pagagamento por cartão com sucesso", testeId);
+          const priceId = event.data.object.metadata?.priceId;
+          console.log("pagamento por cartão com sucesso", priceId);
         }
 
         if (
@@ -47,24 +47,24 @@ export async function POST(req: Request) {
       case "checkout.session.expired":
         if (event.data.object.payment_status === "unpaid") {
           // O cliente saiu do checkout e expirou :(
-          const testeId = event.data.object.metadata?.testeId;
-          console.log("checkout expirado", testeId);
+          const priceId = event.data.object.metadata?.priceId;
+          console.log("checkout expirado", priceId);
         }
         break;
 
       case "checkout.session.async_payment_succeeded":
         if (event.data.object.payment_status === "paid") {
           // O cliente pagou o boleto e o pagamento foi confirmado
-          const testeId = event.data.object.metadata?.testeId;
-          console.log("pagamento boleto confirmado", testeId);
+          const priceId = event.data.object.metadata?.priceId;
+          console.log("pagamento boleto confirmado", priceId);
         }
         break;
 
       case "checkout.session.async_payment_failed":
         if (event.data.object.payment_status === "unpaid") {
           // O cliente não pagou o boleto e ele venceu :(
-          const testeId = event.data.object.metadata?.testeId;
-          console.log("pagamento boleto falhou", testeId);
+          const priceId = event.data.object.metadata?.priceId;
+          console.log("pagamento boleto falhou", priceId);
         }
         break;
 

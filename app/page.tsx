@@ -12,7 +12,7 @@ import { TestimonialsContainer } from "@/containers/TestimonialsContainer";
 import { FaqContainer } from "@/containers/FaqContainer";
 import { HeroDevIniciante } from "@/containers/HeroDevIniciante";
 import { HeroDevAi } from "@/containers/HeroDevAi";
-
+import FeedbackContainer from "@/containers/FeedbackContainer";
 export default function Home() {
   return (
     <>
@@ -31,6 +31,19 @@ export default function Home() {
         <TestimonialsContainer />
         <CtaContainer />
         <FaqContainer />
+        <FeedbackContainer
+          emailPage={"milton@edu4.dev"}
+          emailFolder={`home`}
+          subject={"Contato: Edu4Dev - Escola de Programação"}
+          yourName={`Seu Nome`}
+          yourEmail={`Seu E-mail`}
+          yourMessage={`Sua Mensagem`}
+          sendRequest={`Enviar`}
+          conversionID={null}
+          elementID={null}
+          gtagCounter={null}
+          feedbackHeading={null}
+        />
       </div>
       <FooterContainer />
     </>

@@ -202,14 +202,16 @@ export const PricingContainer = () => {
 
                   <Button
                     className="gap-4 gold-btn"
-                    onClick={() =>
-                      handleClick(
-                        process.env.NEXT_PUBLIC_STRIPE_KIT_DEV_INICIANTE!
-                      )
-                    }
                     disabled={isCreatingCheckout}
                   >
-                    Inserir no Carrinho <MoveRight className="w-4 h-4" />
+                    <a
+                      href={`https://buy.stripe.com/fZeaHZ0MC48rc5qeUU`}
+                      target="_blank"
+                      rel="nofollow, noindex, noreferrer"
+                    >
+                      {" "}
+                      Inserir no Carrinho
+                    </a>
                   </Button>
                   <p className="text-muted-foreground text-xs text-center italic">
                     Inicie o seu caminho DEV agora mesmo!
@@ -284,15 +286,20 @@ export const PricingContainer = () => {
                       </div>
                     </div>
                   </div>
+
                   <Button
                     variant="outline"
                     className="gap-4 green-hover"
-                    onClick={() =>
-                      handleClick(process.env.NEXT_PUBLIC_STRIPE_KIT_DEV_IA!)
-                    }
                     disabled={isCreatingCheckout}
                   >
-                    Pré-Venda, desconto 30%* <MoveRight className="w-4 h-4" />
+                    <a
+                      href={`https://buy.stripe.com/14keYfbrgbAT6L6145`}
+                      target="_blank"
+                      rel="nofollow, noindex, noreferrer"
+                    >
+                      {" "}
+                      Pré-Venda, desconto 30%*
+                    </a>
                   </Button>
                   {/* <Button className="gap-4 gold-btn">
                   Inserir no Carrinho <MoveRight className="w-4 h-4" />

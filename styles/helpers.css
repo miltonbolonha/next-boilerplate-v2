@@ -109,6 +109,12 @@ h1.bangers {
   background-color: #ff9215;
   color: #000;
   font-weight: 700;
+  a {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }
 .gold-btn:hover {
   color: white;
@@ -235,4 +241,26 @@ h1.bangers {
 }
 .hack-header {
   padding-left: 0;
+}
+.stripe-button {
+  max-width: 150px;
+}
+
+/**/
+.feedback input,
+.feedback textarea {
+  border: 2px solid #000;
+  margin-bottom: 10px;
+}
+
+.feedback label {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.feedback textarea {
+  min-height: 100px;
+}
+.mb-96block {
+  margin-bottom: 96px;
+  display: block;
 }
