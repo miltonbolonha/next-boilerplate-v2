@@ -1,15 +1,14 @@
 import React from "react";
-import Head from "next/head";
 const Seo = ({ children, data = null }) => {
   if (!data) {
     return (
-      <Head>
+      <head>
         <title>NO SEO DATA</title>
-      </Head>
+      </head>
     );
   }
   return (
-    <Head>
+    <head>
       <title>{data?.title}</title>
       <meta name="robots" content={"index, follow"} />
       <meta name="description" content={data?.description} />
@@ -83,7 +82,7 @@ const Seo = ({ children, data = null }) => {
         <meta name="google-adsense-account" content={data?.adsAccount} />
       ) : null}
       {children}
-    </Head>
+    </head>
   );
 };
 export default Seo;

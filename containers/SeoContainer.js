@@ -21,10 +21,10 @@ const SeoContainer = ({ data, killSeo = true }) => {
 
   if (killSeo || devMode) {
     return (
-      <Head>
+      <head>
         <title>NO SEO</title>
         <meta name="robots" content={"noindex, nofollow"} />
-      </Head>
+      </head>
     );
   }
   let socialValues = [];

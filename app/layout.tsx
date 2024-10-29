@@ -6,16 +6,11 @@ import "@fontsource/sedgwick-ave";
 import "@fontsource/rammetto-one";
 import "@fontsource/unkempt";
 import "@fontsource/bangers";
-import SeoContainer from "@/containers/SeoContainer.js";
 import { ThemeProvider } from "@/services/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { ModeToggle } from "@/components/ui/mode-toggle";
+import SeoContainer from "@/containers/SeoContainer.js";
 import faq from "@/content/faq.json";
-
-// import { auth } from "@/lib/auth";
-// import { SessionProvider } from "next-auth/react";
-// These styles apply to every route in the application
-// import { AuthProvider } from "@/components/auth/AuthProvider";
 
 const x = {
   slug: "",
@@ -28,6 +23,11 @@ const x = {
   topology: `page`,
   articleUrl: `https://edu4.dev`,
 };
+// import { auth } from "@/lib/auth";
+// import { SessionProvider } from "next-auth/react";
+// These styles apply to every route in the application
+// import { AuthProvider } from "@/components/auth/AuthProvider";
+
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -36,7 +36,7 @@ export default async function RootLayout({
   // const session = await auth();
 
   return (
-    <html lang="pt">
+    <html lang="pt" suppressHydrationWarning>
       <SeoContainer killSeo={false} data={x} />
       <body>
         {/* <SessionProvider session={session}>
