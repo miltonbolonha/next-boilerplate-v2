@@ -281,14 +281,22 @@ export const PricingContainer = () => {
                       </div>
                     </div>
                   </div>
-                  <a
+                  <Button
+                    variant="outline"
+                    className="gap-4 green-hover disabled"
+                    disabled
+                  >
+                    Lançamento dez/24 <MoveRight className="w-4 h-4" />
+                  </Button>
+
+                  {/* <a
                     href={process.env.NEXT_PUBLIC_STRIP_BTN_BUY_2}
                     target="_blank"
                     rel="nofollow, noindex, noreferrer"
                     className="gap-4 gold-btn"
                   >
                     Pré-Venda, desconto 30%*
-                  </a>
+                  </a> */}
                   <p className="text-muted-foreground text-xs text-center italic">
                     Seja o primeiro a garantir o seu kit I.A.
                   </p>
