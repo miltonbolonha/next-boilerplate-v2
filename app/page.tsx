@@ -13,6 +13,7 @@ import { FaqContainer } from "@/containers/FaqContainer";
 import { HeroDevIniciante } from "@/containers/HeroDevIniciante";
 import { HeroDevAi } from "@/containers/HeroDevAi";
 import FeedbackContainer from "@/containers/FeedbackContainer";
+
 export default function Home() {
   return (
     <>

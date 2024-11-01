@@ -1,5 +1,5 @@
 import React from "react";
-const Seo = ({ children, data = null }) => {
+const SEO = ({ children, data = null }) => {
   if (!data) {
     return (
       <head>
@@ -85,4 +85,4 @@ const Seo = ({ children, data = null }) => {
     </head>
   );
 };
-export default Seo;
+export default SEO;

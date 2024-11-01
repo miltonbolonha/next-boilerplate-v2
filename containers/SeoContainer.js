@@ -1,6 +1,6 @@
 import React from "react";
 // import Head from "next/head";
-import SEO from "@/components/SEO";
+import { generateMetadata } from "@/components/NextSeo";
 
 import integrations from "@/content/integrations.json";
 import general from "@/content/general.json";
@@ -9,6 +9,7 @@ import business from "@/content/business.json";
 import logos from "@/content/logos.json";
 import linkTree from "@/content/linkTree.json";
 import { devMode } from "@/lib/devMode";
+
 const SeoContainer = ({ data, killSeo = true }) => {
   // const isBrowser = () => typeof window !== "undefined";
   // if (!isBrowser) {
@@ -125,44 +126,112 @@ const SeoContainer = ({ data, killSeo = true }) => {
       mainEntity: [arrayQuestions],
     },
   ];
-  return (
-    <SEO
-      data={{
-        author: data?.author,
-        siteUrl: general?.siteUrl,
-        brandName: business?.brandName,
-        brandEmail: business?.brandEmail,
-        brandLogo: logo,
-        brandPhone: data?.brandPhone,
-        title: data?.title,
-        brandDescription: business?.brandDescription,
-        dateCreated: data?.dateCreated,
-        dateNow: data?.dateNow,
-        articleBody:
-          typeof data?.articleBody !== "undefined"
-            ? data?.articleBody?.toString()
-            : data?.description,
-        datePublished: data?.datePublished,
-        i18n: general?.i18n,
-        keywords: data?.keywords,
-        topology: data?.topology,
-        articleUrl: data?.articleUrl,
-        description: data?.description,
-        brandCardImage: logos?.cardLogo,
-        featuredImage: data?.featuredImage,
-        themeColor: theme?.themeColors?.brand_color,
-        slug: data?.slug,
-        fbAppID: data?.fbAppID || null,
-        twitter: data?.twitter || null,
-        articleSchema: articleSchema,
-        webSiteSchema: webSiteSchema,
-        orgSchema: orgSchema,
-        questionSchema: questionSchema,
-        brandPerson: business?.brandName,
-        adsAccount: integrations?.googleIntegration?.adsAccount,
-      }}
-    />
-  );
+
+  const data = {
+    author: data?.author,
+    siteUrl: general?.siteUrl,
+    brandName: business?.brandName,
+    brandEmail: business?.brandEmail,
+    brandLogo: logo,
+    brandPhone: data?.brandPhone,
+    title: data?.title,
+    brandDescription: business?.brandDescription,
+    dateCreated: data?.dateCreated,
+    dateNow: data?.dateNow,
+    articleBody:
+      typeof data?.articleBody !== "undefined"
+        ? data?.articleBody?.toString()
+        : data?.description,
+    datePublished: data?.datePublished,
+    i18n: general?.i18n,
+    keywords: data?.keywords,
+    topology: data?.topology,
+    articleUrl: data?.articleUrl,
+    description: data?.description,
+    brandCardImage: logos?.cardLogo,
+    featuredImage: data?.featuredImage,
+    themeColor: theme?.themeColors?.brand_color,
+    slug: data?.slug,
+    fbAppID: data?.fbAppID || null,
+    twitter: data?.twitter || null,
+    articleSchema: articleSchema,
+    webSiteSchema: webSiteSchema,
+    orgSchema: orgSchema,
+    questionSchema: questionSchema,
+    brandPerson: business?.brandName,
+    adsAccount: integrations?.googleIntegration?.adsAccount,
+  };
+
+  generateMetadata(data);
 };
 
 export default SeoContainer;
+
+async function generateMetadata({ data }) {
+  if (!data) {
+    return {
+      title: "NO SEO DATA",
+    };
+  }
+
+  return {
+    title: data.title,
+    description: data.description,
+    robots: "index, follow",
+    keywords: data.topology === "post" ? undefined : data.keywords?.join(", "),
+    icons: {
+      icon: data.featuredImage || data.brandCardImage,
+    },
+    themeColor: data.themeColor || "#FF0081",
+    alternates: {
+      canonical: `${data.siteUrl}${data.slug}`,
+    },
+    openGraph: {
+      type: data.topology === "post" ? "article" : "website",
+      url: data.articleUrl,
+      siteName: data.title,
+      title: data.title,
+      description: data.description,
+      images: [
+        {
+          url: data.featuredImage || data.brandCardImage,
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      creator: data.author,
+      title: data.title,
+      description: data.description,
+      images: [data.featuredImage || data.brandCardImage],
+    },
+    other: {
+      "article:author": data.author,
+      "article:publisher": data.siteUrl,
+      "og:publish_date": data.datePublished,
+      "article:published_time": data.datePublished,
+      "fb:app_id": data.social?.fbAppID,
+      "google-adsense-account": data.adsAccount,
+    },
+    script: [
+      ...(data.topology === "post"
+        ? [
+            {
+              type: "application/ld+json",
+              dangerouslySetInnerHTML: JSON.stringify(data.articleSchema),
+            },
+          ]
+        : []),
+      {
+        type: "application/ld+json",
+        dangerouslySetInnerHTML: JSON.stringify(data.webSiteSchema),
+      },
+      {
+        type: "application/ld+json",
+        dangerouslySetInnerHTML: JSON.stringify(data.orgSchema),
+      },
+    ],
+  };
+}
