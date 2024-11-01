@@ -11,6 +11,7 @@
     "prefix": ""
   },
   "aliases": {
+    "images": "@/public/assets/images",
     "components": "@/components",
     "conteiners": "@/conteiners",
     "content": "@/content",

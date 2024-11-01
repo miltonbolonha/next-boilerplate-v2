@@ -49,9 +49,9 @@ export default async function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <ModeToggle />
+          {/* <ModeToggle /> */}
           {children}
-          <Toaster />
+          {/* <Toaster /> */}
         </ThemeProvider>
       </body>
     </html>

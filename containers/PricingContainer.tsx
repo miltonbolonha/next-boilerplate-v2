@@ -104,10 +104,10 @@ export const PricingContainer = () => {
               <CardContent>
                 <div className="flex flex-col gap-8 justify-start">
                   <p className="flex flex-row  items-center gap-2 text-xl">
-                    <span className="text-4xl">R$470</span>
+                    <span className="text-4xl">R$474</span>
                     <span className="text-sm text-muted-foreground line-through">
                       {" "}
-                      / R$720
+                      / R$790
                     </span>
                   </p>
                   <div className="flex flex-col gap-4 justify-start">
@@ -171,15 +171,6 @@ export const PricingContainer = () => {
                         <p className="text-muted-foreground text-sm">
                           • Músicas Para Trabalhar
                         </p>
-                        <p className="text-muted-foreground text-sm">
-                          • Stickers
-                        </p>
-                        <p className="text-muted-foreground text-sm">
-                          • Jogo da Memória
-                        </p>
-                        <p className="text-muted-foreground text-sm">
-                          • Caça Palavras
-                        </p>
                       </div>
                     </div>
 
@@ -200,19 +191,14 @@ export const PricingContainer = () => {
                     </div>
                   </div>
 
-                  <Button
+                  <a
+                    href={process.env.NEXT_PUBLIC_STRIP_BTN_BUY_1}
+                    target="_blank"
+                    rel="nofollow, noindex, noreferrer"
                     className="gap-4 gold-btn"
-                    disabled={isCreatingCheckout}
                   >
-                    <a
-                      href={`https://buy.stripe.com/fZeaHZ0MC48rc5qeUU`}
-                      target="_blank"
-                      rel="nofollow, noindex, noreferrer"
-                    >
-                      {" "}
-                      Inserir no Carrinho
-                    </a>
-                  </Button>
+                    Inserir no Carrinho
+                  </a>
                   <p className="text-muted-foreground text-xs text-center italic">
                     Inicie o seu caminho DEV agora mesmo!
                   </p>
@@ -283,143 +269,37 @@ export const PricingContainer = () => {
                         <p className="text-muted-foreground text-sm">
                           • E-book Carreira Internacional
                         </p>
+                        <p className="text-muted-foreground text-sm">
+                          • Stickers
+                        </p>
+                        <p className="text-muted-foreground text-sm">
+                          • Jogo da Memória
+                        </p>
+                        <p className="text-muted-foreground text-sm">
+                          • Caça Palavras
+                        </p>
                       </div>
                     </div>
                   </div>
-
-                  <Button
-                    variant="outline"
-                    className="gap-4 green-hover"
-                    disabled={isCreatingCheckout}
+                  <a
+                    href={process.env.NEXT_PUBLIC_STRIP_BTN_BUY_2}
+                    target="_blank"
+                    rel="nofollow, noindex, noreferrer"
+                    className="gap-4 gold-btn"
                   >
-                    <a
-                      href={`https://buy.stripe.com/14keYfbrgbAT6L6145`}
-                      target="_blank"
-                      rel="nofollow, noindex, noreferrer"
-                    >
-                      {" "}
-                      Pré-Venda, desconto 30%*
-                    </a>
-                  </Button>
-                  {/* <Button className="gap-4 gold-btn">
-                  Inserir no Carrinho <MoveRight className="w-4 h-4" />
-                </Button> */}
+                    Pré-Venda, desconto 30%*
+                  </a>
                   <p className="text-muted-foreground text-xs text-center italic">
                     Seja o primeiro a garantir o seu kit I.A.
                   </p>
                 </div>
               </CardContent>
             </Card>
-
-            {/* <Card className="w-full shadow-2xl rounded-md">
-            <CardHeader>
-              <CardTitle>
-                <span className="flex flex-row gap-4 items-center font-normal">
-                  Impresso + Virtual
-                </span>
-              </CardTitle>
-              <CardDescription>
-                Esse é o kit completo, contendo livros, caderno, vídeos, e mais.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-col gap-8 justify-start">
-                <p className="flex flex-row  items-center gap-2 text-4xl">
-                  <span className="">R$1200</span>
-                  <span className="text-sm text-muted-foreground line-through">
-                    {" "}
-                    / R$1440
-                  </span>
-                </p>
-                <div className="flex flex-col gap-4 justify-start">
-                  <div className="flex flex-row gap-4">
-                    <Check className="w-4 h-4 mt-2 text-primary" />
-                    <div className="flex flex-col">
-                      <p>Virtual</p>
-                      <p className="text-muted-foreground text-sm">
-                        • Todo material virtual
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-row gap-4">
-                    <Check className="w-4 h-4 mt-2 text-primary" />
-                    <div className="flex flex-col">
-                      <p>Livro Impresso</p>
-                      <p className="text-muted-foreground text-sm">
-                        • Introdução à Programação
-                      </p>
-                      <p className="text-muted-foreground text-sm">
-                        • Eugenia 3.0
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-row gap-4">
-                    <Check className="w-4 h-4 mt-2 text-primary" />
-                    <div className="flex flex-col">
-                      <p>Desafio Game Developer</p>
-                      <p className="text-muted-foreground text-sm">
-                        • 01 - Manual de Regras Básicas
-                      </p>
-                      <p className="text-muted-foreground text-sm">
-                        • 01 - Tabuleiro
-                      </p>
-                      <p className="text-muted-foreground text-sm">
-                        • 04 - Cards de Família
-                      </p>
-                      <p className="text-muted-foreground text-sm">
-                        • 100 - Cards Customizáveis
-                      </p>
-                      <p className="text-muted-foreground text-sm">
-                        • Instruções do Desafio
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-row gap-4">
-                    <Check className="w-4 h-4 mt-2 text-primary" />
-                    <div className="flex flex-col">
-                      <p>Papelaria Personalizada</p>
-                      <p className="text-muted-foreground text-sm">
-                        • Caderno Personalizado
-                      </p>
-                      <p className="text-muted-foreground text-sm">
-                        • Adesivos
-                      </p>
-                      <p className="text-muted-foreground text-sm">
-                        • + Surpresas
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-row gap-4">
-                    <Check className="w-4 h-4 mt-2 text-primary" />
-                    <div className="flex flex-col">
-                      <p>Suporte</p>
-                      <p className="text-muted-foreground text-sm">
-                        • Canais Premium no Discord
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <Button variant="outline" className="gap-4 green-hover">
-                  Pré-Venda* <MoveRight className="w-4 h-4" />
-                </Button>
-               <Button className="gap-4 gold-btn">
-                  Inserir no Carrinho <MoveRight className="w-4 h-4" />
-                </Button> 
-                <p className="text-muted-foreground text-xs text-center italic">
-                  Seja o primeiro a garantir o seu kit impresso.
-                </p>
-              </div>
-            </CardContent>
-          </Card> */}
             <Card className="w-full rounded-md">
               <CardHeader>
                 <CardTitle>
                   <span className="flex flex-row gap-4 items-center font-normal">
-                    Próximo Lançamento
+                    Mentoria Dev
                   </span>
                 </CardTitle>
                 <CardDescription>
@@ -428,52 +308,38 @@ export const PricingContainer = () => {
               </CardHeader>
               <CardContent>
                 <div className="flex flex-col gap-8 justify-start">
-                  <br />
+                  <p className="flex flex-row  items-center gap-2 text-4xl">
+                    <span className="">R$150</span>
+                    <span className="text-sm text-muted-foreground line-through">
+                      {" "}
+                      / hora
+                    </span>
+                  </p>
 
                   <div className="flex flex-row gap-4">
                     <Check className="w-4 h-4 mt-2 text-primary" />
                     <div className="flex flex-col">
-                      <p>Trilhas do Saber</p>
+                      <p>Mentoria Técnica</p>
+                      <p className="text-muted-foreground text-sm">• Next.js</p>
                       <p className="text-muted-foreground text-sm">
-                        • Trilha Hackaton
+                        • Gatsby.js
                       </p>
-                    </div>
-                  </div>
+                      <p className="text-muted-foreground text-sm">• Node.js</p>
+                      <p className="text-muted-foreground text-sm">
+                        • Javascript
+                      </p>
+                      <p className="text-muted-foreground text-sm">
+                        • WordPress
+                      </p>
+                      <p className="text-muted-foreground text-sm">
+                        • GitHub Action
+                      </p>
 
-                  <div className="flex flex-row gap-4">
-                    <Check className="w-4 h-4 mt-2 text-primary" />
-                    <div className="flex flex-col">
-                      <p>Desafio Game Developer</p>
                       <p className="text-muted-foreground text-sm">
-                        • 01 - Manual de Regras Básicas
+                        • CPanel p/ WP
                       </p>
                       <p className="text-muted-foreground text-sm">
-                        • 01 - Tabuleiro
-                      </p>
-                      <p className="text-muted-foreground text-sm">
-                        • 04 - Cards de Família
-                      </p>
-                      <p className="text-muted-foreground text-sm">
-                        • 100 - Cards Customizáveis
-                      </p>
-                      <p className="text-muted-foreground text-sm">
-                        • Instruções do Desafio
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-row gap-4">
-                    <Check className="w-4 h-4 mt-2 text-primary" />
-                    <div className="flex flex-col">
-                      <p>Papelaria Personalizada</p>
-                      <p className="text-muted-foreground text-sm">
-                        • Caderno Personalizado
-                      </p>
-                      <p className="text-muted-foreground text-sm">
-                        • Adesivos
-                      </p>
-                      <p className="text-muted-foreground text-sm">
-                        • + Surpresas
+                        • Windows p/ Node.js Dev
                       </p>
                     </div>
                   </div>
@@ -481,48 +347,68 @@ export const PricingContainer = () => {
                   <div className="flex flex-row gap-4">
                     <Check className="w-4 h-4 mt-2 text-primary" />
                     <div className="flex flex-col">
-                      <p>Suporte</p>
+                      <p>Mentoria de Carreira</p>
                       <p className="text-muted-foreground text-sm">
-                        • Canais Premium no Discord
+                        • Mentoria das Trilhas
                       </p>
+                      <p className="text-muted-foreground text-sm">
+                        • Dev Iniciante
+                      </p>
+                      <p className="text-muted-foreground text-sm">
+                        • Dev Experiente
+                      </p>
+                      <p className="text-muted-foreground text-sm">
+                        • Dev Especialista
+                      </p>
+
+                      <p className="text-muted-foreground text-sm">
+                        • GitHub Developer
+                      </p>
+
+                      <p className="text-muted-foreground text-sm">
+                        • Front-End
+                      </p>
+
+                      <p className="text-muted-foreground text-sm">
+                        • Back-End
+                      </p>
+
+                      <p className="text-muted-foreground text-sm">• DevOps</p>
+                      <p className="text-muted-foreground text-sm">• CTO</p>
                     </div>
                   </div>
-                  {/* <div className="flex flex-col gap-4 justify-start">
+
                   <div className="flex flex-row gap-4">
                     <Check className="w-4 h-4 mt-2 text-primary" />
                     <div className="flex flex-col">
-                      <p>Material do Seu Método</p>
+                      <p>Tecnologia e Gerenciamento</p>
                       <p className="text-muted-foreground text-sm">
-                        • A partir da visão do cliente
+                        • OpenAi e Inteligência Artificial
+                      </p>
+                      <p className="text-muted-foreground text-sm">
+                        • Marketing Digital
+                      </p>
+                      <p className="text-muted-foreground text-sm">
+                        • Sistema de OKR's e Planejamento
+                      </p>
+                      <p className="text-muted-foreground text-sm">
+                        • Planejamento de Vendas e Funil
+                      </p>
+                      <p className="text-muted-foreground text-sm">
+                        • Ponto de Venda e Primeira Venda
                       </p>
                     </div>
                   </div>
-                  <div className="flex flex-row gap-4">
-                    <Check className="w-4 h-4 mt-2 text-primary" />
-                    <div className="flex flex-col">
-                      <p>Treinamentos</p>
-                      <p className="text-muted-foreground text-sm">
-                        • Consultoria para agências web e startups
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex flex-row gap-4">
-                    <Check className="w-4 h-4 mt-2 text-primary" />
-                    <div className="flex flex-col">
-                      <p>Tecnologia</p>
-                      <p className="text-muted-foreground text-sm">
-                        • Garantimos a melhor tecnologia
-                      </p>
-                    </div>
-                  </div>
-                </div> */}
-                  <Button
-                    variant="outline"
-                    className="gap-4 green-hover disabled"
-                    disabled
+
+                  <a
+                    href={process.env.NEXT_PUBLIC_STRIP_BTN_BUY_3}
+                    target="_blank"
+                    rel="nofollow, noindex, noreferrer"
+                    className="gap-4 gold-btn"
                   >
-                    Indisponível <MoveRight className="w-4 h-4" />
-                  </Button>
+                    Inserir no Carrinho
+                  </a>
+                  {/*  */}
                 </div>
               </CardContent>
             </Card>

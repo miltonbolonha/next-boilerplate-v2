@@ -62,7 +62,10 @@ export const TestimonialsContainer = () => {
           <Carousel setApi={setApi} className="w-full">
             <CarouselContent>
               {arr.map((ar, index) => (
-                <CarouselItem className="lg:basis-1/2 mr-4" key={index}>
+                <CarouselItem
+                  className="lg:basis-1/2 mr-4 carousel-item"
+                  key={index}
+                >
                   <div className="bg-muted testimonial-bg rounded-md h-full lg:col-span-2 p-6 flex justify-between flex-col">
                     <div className="flex flex-col gap-4">
                       <div className="flex flex-col">
@@ -74,7 +77,10 @@ export const TestimonialsContainer = () => {
                       <p className="flex flex-row gap-2 text-sm items-center">
                         <span className="text-muted-foreground">By</span>{" "}
                         <Avatar className="h-6 w-6">
-                          <AvatarImage src={`/assets/images/logo-github.png`} />
+                          <AvatarImage
+                            src={`/assets/images/logo-github.png`}
+                            alt={"User"}
+                          />
                           <AvatarFallback>CN</AvatarFallback>
                         </Avatar>
                         <span>{ar.author}</span>
