@@ -317,7 +317,7 @@ export const PricingContainer = () => {
                 <div className="flex flex-col gap-8 justify-start">
                   <p className="flex flex-row  items-center gap-2 text-4xl">
                     <span className="">R$150</span>
-                    <span className="text-sm text-muted-foreground line-through">
+                    <span className="text-sm text-muted-foreground">
                       {" "}
                       / hora
                     </span>

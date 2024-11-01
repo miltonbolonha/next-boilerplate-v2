@@ -150,6 +150,7 @@ const seoAssemble = (killSeo = true) => {
   return {
     title: data.title,
     description: data.description,
+    author: data.author,
     robots: "index, follow",
     keywords: data.topology === "post" ? undefined : data.keywords?.join(", "),
     icons: {
