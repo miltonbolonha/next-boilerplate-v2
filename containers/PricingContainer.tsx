@@ -408,6 +408,13 @@ export const PricingContainer = () => {
                   >
                     Inserir no Carrinho
                   </a>
+                  <p className="flex flex-row  items-center gap-2 text-sm">
+                    <small className="text-muted-foreground">
+                      Todas as mentorias são baseadas no nosso ecossistema. Caso
+                      você tenha alguma dúvida você pode usar o formulário de
+                      contato abaixo, ou mandar um e-mail pra contato@edu4.dev
+                    </small>
+                  </p>
                   {/*  */}
                 </div>
               </CardContent>
