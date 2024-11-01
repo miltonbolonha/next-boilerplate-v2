@@ -5,6 +5,7 @@ const nextConfig = {
   // output: "export",
   trailingSlash: true,
   swcMinify: true,
+  output: "export",
   assetPrefix: isProd ? process.env.WEBSITE_URL : "",
   images: {
     deviceSizes: [350, 480, 640, 768, 960, 1250, 2048],
