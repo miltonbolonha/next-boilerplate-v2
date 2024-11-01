@@ -119,7 +119,7 @@ export const PricingContainer = () => {
                           • 01 - Livro Para Iniciantes (PDF)
                         </p>
                         <p className="text-muted-foreground text-sm">
-                          • 05 - Módulos em PDF
+                          • 03 - Módulos de Estudo (PDF)
                         </p>
                         <p className="text-muted-foreground text-sm">
                           • 02 - Vídeo-aulas
@@ -178,9 +178,7 @@ export const PricingContainer = () => {
                       <Check className="w-4 h-4 mt-2 text-primary" />
                       <div className="flex flex-col">
                         <p>Suporte</p>
-                        <p className="text-muted-foreground text-sm">
-                          • FAQ
-                        </p>{" "}
+
                         <p className="text-muted-foreground text-sm">
                           • Suporte Geral
                         </p>
@@ -269,6 +267,7 @@ export const PricingContainer = () => {
                         <p className="text-muted-foreground text-sm">
                           • E-book Carreira Internacional
                         </p>
+                        <p className="text-muted-foreground text-sm">• FAQ</p>{" "}
                         <p className="text-muted-foreground text-sm">
                           • Stickers
                         </p>
