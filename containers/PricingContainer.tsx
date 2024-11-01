@@ -310,7 +310,8 @@ export const PricingContainer = () => {
                   </span>
                 </CardTitle>
                 <CardDescription>
-                  Estamos preparando materiais impressos com todo carinho.
+                  Oferecemos mentoria para desenvolvedores e consultoria para
+                  empresas.
                 </CardDescription>
               </CardHeader>
               <CardContent>
