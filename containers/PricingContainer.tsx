@@ -253,7 +253,7 @@ export const PricingContainer = () => {
                           • Trilha Carreira Internacional
                         </p>
                         <p className="text-muted-foreground text-sm">
-                          • Trilha StartUP
+                          • Trilha SaaS
                         </p>
                       </div>
                     </div>
