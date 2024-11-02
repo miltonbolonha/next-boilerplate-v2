@@ -148,10 +148,6 @@ export const PricingContainer = () => {
                         <p className="text-muted-foreground text-sm">
                           • Trilha Ignição
                         </p>
-
-                        <p className="text-muted-foreground text-sm">
-                          • Trilha Programador Web
-                        </p>
                       </div>
                     </div>
 
@@ -250,7 +246,9 @@ export const PricingContainer = () => {
                       <Check className="w-4 h-4 mt-2 text-primary" />
                       <div className="flex flex-col">
                         <p>Trilhas do Saber</p>
-
+                        <p className="text-muted-foreground text-sm">
+                          • Trilha Programador Web
+                        </p>
                         <p className="text-muted-foreground text-sm">
                           • Trilha Carreira Internacional
                         </p>
